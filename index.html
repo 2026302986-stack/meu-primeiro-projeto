@@ -110,6 +110,18 @@
             }
         }
 
+        function sqrtValue() {
+            const value = display.value.trim();
+            if (!value) return;
+
+            const numericValue = Number(value);
+            if (Number.isNaN(numericValue) || numericValue < 0) {
+                display.value = 'Erro';
+                return;
+            }
+
+            display.value = Math.sqrt(numericValue).toString();
+        }
         function clearDisplay() {
             display.value = '';
         }
